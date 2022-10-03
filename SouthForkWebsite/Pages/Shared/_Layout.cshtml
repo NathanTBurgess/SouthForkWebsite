@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SouthForkWebsite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SouthForkWebsite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="shadow">
+        <nav>
+            <ul>
+                <li class="navaction">
+                    <a class="navlink" asp-area="" asp-page="/Shop">&nbsp&nbsp&nbsp&nbsp&nbspShop&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                    <a class="navlink" asp-area="" asp-page="/Food">&nbsp&nbsp&nbsp&nbsp&nbspFood&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                </li>
+                <li>
+                    <a class="navlink logobutton" asp-area="" asp-page="/Index"><img src="/images/South Fork sign final.jpg" onmouseover="this.src='/images/South Fork sign final ani.jpg'" onmouseout="this.src='/images/South Fork sign final.jpg'" class="w-100 navlogo" /></a>
+                </li>
+                <li class="navaction">
+                    <a class="navlink" asp-area="" asp-page="/Calendar">Calendar</a>
+                    <a class="navlink" asp-area="" asp-page="/AboutUs">About&nbspus</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <main role="main" class="pb-3 pt-3">
+            @RenderBody()
+        </main>
+
+    <footer class="border-top">
+        <div class="footerinfo">
+            <div>
+                &copy; 2022 - South Fork General Store <a class="nav-link text-dark customnavitem" asp-area="" asp-page="/Contact">Contact us</a>          
+            </div>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100057410201954" class="px-2"><ion-icon class="sociallogo" name="logo-facebook"></ion-icon></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
